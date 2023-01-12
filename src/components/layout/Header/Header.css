@@ -3,3 +3,8 @@ header {
   height: 10vh;
   color: white;
 }
+
+p {
+  margin: 0;
+  padding: 0;
+}
