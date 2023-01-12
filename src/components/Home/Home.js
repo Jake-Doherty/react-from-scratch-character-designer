@@ -9,6 +9,7 @@ export default function Home() {
   const [head, setHead] = useState('head1');
   const [body, setBody] = useState('body1');
   const [legs, setLegs] = useState('legs1');
+  const [headCount, setHeadCount] = useState(0);
   return (
     <main>
       <Editor
@@ -20,8 +21,10 @@ export default function Home() {
         setBody={setBody}
         legs={legs}
         setLegs={setLegs}
+        headCount={headCount}
+        setHeadCount={setHeadCount}
       />
-      <Preview name={name} head={head} body={body} legs={legs} />
+      <Preview name={name} head={head} body={body} legs={legs} headCount={headCount} />
     </main>
   );
 }
