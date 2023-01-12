@@ -6,10 +6,11 @@ import './Home.css';
 
 export default function Home() {
   const [name, setName] = useState('Character Name');
+  const [head, setHead] = useState('head1');
   return (
     <main>
-      <Editor name={name} setName={setName} />
-      <Preview name={name} />
+      <Editor name={name} setName={setName} head={head} setHead={setHead} />
+      <Preview name={name} head={head} />
     </main>
   );
 }
