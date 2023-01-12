@@ -1,14 +1,14 @@
 import React from 'react';
 import './Preview.css';
 
-export default function Preview({ name }) {
+export default function Preview({ name, head }) {
   return (
     <>
       <div className="character-preview">
         <h1>Character Preview</h1>
         <p key={name}>{name}</p>
         <div className="character-image-container">
-          <img src="https://yanksmannequins.com/1186/mannequin-head-h37.jpg" alt="head" />
+          <img src={`/images/${head}.jpg`} alt={head} />
           <img
             src="https://publicdomainvectors.org/tn_img/ryanlerch_pink_t-shirt.webp"
             alt="torso"
