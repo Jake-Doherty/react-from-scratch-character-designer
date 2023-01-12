@@ -1,11 +1,12 @@
 import React from 'react';
 import './Editor.css';
 
-export default function Editor({ name, setName, head, setHead, body, setBody }) {
+export default function Editor({ name, setName, head, setHead, body, setBody, legs, setLegs }) {
   const handleChange = (e) => {
     e.target.name === 'name' && setName(e.target.value);
     e.target.name === 'head' && setHead(e.target.value);
     e.target.name === 'body' && setBody(e.target.value);
+    e.target.name === 'legs' && setLegs(e.target.value);
     // console.log(e.target.value);
   };
   return (
@@ -33,7 +34,11 @@ export default function Editor({ name, setName, head, setHead, body, setBody }) 
       </label>
       <label>
         Legs:
-        <select></select>
+        <select name="legs" value={legs} onChange={handleChange}>
+          <option value="legs1">Legs 1</option>
+          <option value="legs2">Legs 2</option>
+          <option value="legs3">Legs 3</option>
+        </select>
       </label>
     </div>
   );
