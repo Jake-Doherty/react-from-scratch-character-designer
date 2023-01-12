@@ -17,8 +17,21 @@ img {
   height: 150px;
 }
 
-.character-catchphrases {
+/* catchphrases and stats */
+.character-count-catchphrases {
   grid-column-start: span -1;
+  border: 1px solid black;
+  height: fit-content;
+  width: 80%;
+}
+
+.character-catchphrases {
+  border: 1px solid black;
+  height: fit-content;
+  width: 80%;
+}
+
+.selection-count {
   border: 1px solid black;
   height: fit-content;
   width: 80%;
