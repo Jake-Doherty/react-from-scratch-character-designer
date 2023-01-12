@@ -1,4 +1,8 @@
 main {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
   background-color: rgb(196, 196, 196);
   height: 80vh;
+  justify-items: center;
+  align-items: center;
 }
