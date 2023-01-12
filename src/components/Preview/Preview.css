@@ -1,0 +1,25 @@
+.character-preview {
+  width: 80%;
+  display: grid;
+  border: 1px solid black;
+}
+
+.character-image-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+img {
+  width: 150px;
+  height: 150px;
+}
+
+.character-catchphrases {
+  grid-column-start: span -1;
+  border: 1px solid black;
+  height: fit-content;
+  width: 80%;
+}
