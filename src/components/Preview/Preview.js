@@ -1,7 +1,7 @@
 import React from 'react';
 import './Preview.css';
 
-export default function Preview({ name, head, body, legs }) {
+export default function Preview({ name, head, body, legs, headCount }) {
   return (
     <>
       <div className="character-preview">
@@ -13,12 +13,17 @@ export default function Preview({ name, head, body, legs }) {
           <img src={`/images/${legs}.png`} alt={legs} />
         </div>
       </div>
-      <div className="character-catchphrases">
-        <h1>Catchphrases</h1>
-        <ul>
+      <div className="character-count-catchphrases">
+        <h1>Catchphrases & Stats</h1>
+        <ul className="character-catchphrases">
           {/* map through catch phrases and return li */}
           lorem ipsum dolor sit
         </ul>
+        <div className="selection-count">
+          <p className="head-count">Head has been selected {headCount} times.</p>
+          <p className="body-count">Body has been selected times.</p>
+          <p className="legs-count">Legs has been selected times.</p>
+        </div>
       </div>
     </>
   );
