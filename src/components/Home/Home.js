@@ -8,6 +8,7 @@ export default function Home() {
   const [name, setName] = useState('Character Name');
   const [head, setHead] = useState('head1');
   const [body, setBody] = useState('body1');
+  const [legs, setLegs] = useState('legs1');
   return (
     <main>
       <Editor
@@ -17,8 +18,10 @@ export default function Home() {
         setHead={setHead}
         body={body}
         setBody={setBody}
+        legs={legs}
+        setLegs={setLegs}
       />
-      <Preview name={name} head={head} body={body} />
+      <Preview name={name} head={head} body={body} legs={legs} />
     </main>
   );
 }
