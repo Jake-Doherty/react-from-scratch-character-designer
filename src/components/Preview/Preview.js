@@ -1,7 +1,7 @@
 import React from 'react';
 import './Preview.css';
 
-export default function Preview({ name, head }) {
+export default function Preview({ name, head, body }) {
   return (
     <>
       <div className="character-preview">
@@ -9,10 +9,7 @@ export default function Preview({ name, head }) {
         <p key={name}>{name}</p>
         <div className="character-image-container">
           <img src={`/images/${head}.jpg`} alt={head} />
-          <img
-            src="https://publicdomainvectors.org/tn_img/ryanlerch_pink_t-shirt.webp"
-            alt="torso"
-          />
+          <img src={`/images/${body}.png`} alt={body} />
           <img
             src="https://www.seekpng.com/png/detail/76-766707_close-legs-and-shoes-clipart.png"
             alt="legs"
