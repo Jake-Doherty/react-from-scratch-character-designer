@@ -1,9 +1,11 @@
 import React from 'react';
 import './Editor.css';
 
-export default function Editor({ name, setName }) {
+export default function Editor({ name, setName, head, setHead }) {
   const handleChange = (e) => {
     e.target.name === 'name' && setName(e.target.value);
+    e.target.name === 'head' && setHead(e.target.value);
+    console.log(e.target.value);
   };
   return (
     <div className="editor-container">
@@ -14,7 +16,11 @@ export default function Editor({ name, setName }) {
       </label>
       <label>
         Head:
-        <select></select>
+        <select name="head" value={head} onChange={handleChange}>
+          <option value="head1">Head 1</option>
+          <option value="head2">Head 2</option>
+          <option value="head3">Head 3</option>
+        </select>
       </label>
       <label>
         Body:
