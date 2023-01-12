@@ -5,7 +5,7 @@ export default function Editor({ name, setName, head, setHead }) {
   const handleChange = (e) => {
     e.target.name === 'name' && setName(e.target.value);
     e.target.name === 'head' && setHead(e.target.value);
-    console.log(e.target.value);
+    // console.log(e.target.value);
   };
   return (
     <div className="editor-container">
