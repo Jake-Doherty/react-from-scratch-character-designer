@@ -1,0 +1,12 @@
+main {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  background-color: rgb(0, 0, 0);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 80vh;
+  justify-items: center;
+  align-items: center;
+  overflow: hidden;
+}
