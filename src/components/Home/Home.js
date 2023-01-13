@@ -5,7 +5,7 @@ import Preview from '../Preview/Preview.js';
 import './Home.css';
 
 export default function Home() {
-  const [name, setName] = useState('Character Name');
+  const [name, setName] = useState('Derek Zoolander');
   const [head, setHead] = useState('head1');
   const [body, setBody] = useState('body1');
   const [legs, setLegs] = useState('legs1');
