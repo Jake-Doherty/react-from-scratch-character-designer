@@ -14,7 +14,7 @@ export default function Home() {
   const [legsCount, setLegsCount] = useState(0);
   const [catchPhrases, setCatchPhrases] = useState(['but why male models?']);
   return (
-    <main>
+    <main className="Home" style={{ backgroundImage: `url(/images/fashion-runway.jpg)` }}>
       <Editor
         name={name}
         setName={setName}
