@@ -4,7 +4,7 @@ import './Header.css';
 export default function Header() {
   return (
     <header>
-      <p>Character Designer</p>
+      <p>Model Designer</p>
     </header>
   );
 }

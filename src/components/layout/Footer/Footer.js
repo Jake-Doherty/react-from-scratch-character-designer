@@ -2,5 +2,7 @@ import React from 'react';
 import './Footer.css';
 
 export default function Footer() {
-  return <footer>Footer</footer>;
+  return (
+    <footer>“Moisture is the essence of wetness, and wetness is the essence of beauty.”</footer>
+  );
 }

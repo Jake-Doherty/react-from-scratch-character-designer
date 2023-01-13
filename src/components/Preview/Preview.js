@@ -30,7 +30,7 @@ export default function Preview({
             i += 1;
             return (
               <li id={i} key={i}>
-                {phrase}
+                {`"${phrase}"`}
               </li>
             );
           })}
