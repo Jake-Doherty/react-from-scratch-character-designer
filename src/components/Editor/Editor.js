@@ -47,9 +47,12 @@ export default function Editor({
   };
   const handleClick = () => {
     // console.log(inputValue);
-    if (inputValue === '') return alert('Please enter a catch phrase');
-    setCatchPhrases((currentPhrases) => [...currentPhrases, inputValue]);
-    setInputValue('');
+    if (inputValue === '') {
+      return alert('Please enter a catch phrase');
+    } else {
+      setCatchPhrases((currentPhrases) => [...currentPhrases, inputValue]);
+      setInputValue('');
+    }
   };
   return (
     <div className="editor-container">
@@ -84,6 +87,7 @@ export default function Editor({
       </label>
       <input
         type="text"
+        value={inputValue}
         placeholder={catchPhrases[0]}
         onChange={(e) => setInputValue(e.target.value)}
       />
