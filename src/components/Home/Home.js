@@ -12,6 +12,7 @@ export default function Home() {
   const [headCount, setHeadCount] = useState(0);
   const [bodyCount, setBodyCount] = useState(0);
   const [legsCount, setLegsCount] = useState(0);
+  const [catchPhrases, setCatchPhrases] = useState(['but why male models?']);
   return (
     <main>
       <Editor
@@ -29,6 +30,8 @@ export default function Home() {
         setBodyCount={setBodyCount}
         legsCount={legsCount}
         setLegsCount={setLegsCount}
+        catchPhrases={catchPhrases}
+        setCatchPhrases={setCatchPhrases}
       />
       <Preview
         name={name}
@@ -38,6 +41,7 @@ export default function Home() {
         headCount={headCount}
         bodyCount={bodyCount}
         legsCount={legsCount}
+        catchPhrases={catchPhrases}
       />
     </main>
   );
