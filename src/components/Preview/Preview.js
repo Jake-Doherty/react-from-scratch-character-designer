@@ -1,7 +1,7 @@
 import React from 'react';
 import './Preview.css';
 
-export default function Preview({ name, head, body, legs, headCount, bodyCount }) {
+export default function Preview({ name, head, body, legs, headCount, bodyCount, legsCount }) {
   return (
     <>
       <div className="character-preview">
@@ -22,7 +22,7 @@ export default function Preview({ name, head, body, legs, headCount, bodyCount }
         <div className="selection-count">
           <p className="head-count">Head has been selected {headCount} times.</p>
           <p className="body-count">Body has been selected {bodyCount} times.</p>
-          <p className="legs-count">Legs has been selected times.</p>
+          <p className="legs-count">Legs has been selected {legsCount} times.</p>
         </div>
       </div>
     </>
