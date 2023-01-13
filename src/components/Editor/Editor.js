@@ -1,4 +1,5 @@
 import React from 'react';
+import { useState } from 'react';
 import './Editor.css';
 
 export default function Editor({
@@ -16,7 +17,10 @@ export default function Editor({
   setBodyCount,
   legsCount,
   setLegsCount,
+  catchPhrases,
+  setCatchPhrases,
 }) {
+  const [inputValue, setInputValue] = useState('');
   const handleChange = (e) => {
     e.target.name === 'name' && setName(e.target.value);
     e.target.name === 'head' &&
@@ -40,14 +44,19 @@ export default function Editor({
           return legsCount + 1;
         })
       );
-    // console.log(e.target.value);
+  };
+  const handleClick = () => {
+    // console.log(inputValue);
+    if (inputValue === '') return alert('Please enter a catch phrase');
+    setCatchPhrases((currentPhrases) => [...currentPhrases, inputValue]);
+    setInputValue('');
   };
   return (
     <div className="editor-container">
       <h1>Character Editor</h1>
       <label htmlFor="name">
         Name:
-        <input type="text" id="name" name="name" value={name} onChange={handleChange} />
+        <input type="text" id="name" name="name" placeholder={name} onChange={handleChange} />
       </label>
       <label>
         Head:
@@ -73,6 +82,12 @@ export default function Editor({
           <option value="legs3">Legs 3</option>
         </select>
       </label>
+      <input
+        type="text"
+        placeholder={catchPhrases[0]}
+        onChange={(e) => setInputValue(e.target.value)}
+      />
+      <button onClick={handleClick}>Add Catch Phrase</button>
     </div>
   );
 }
