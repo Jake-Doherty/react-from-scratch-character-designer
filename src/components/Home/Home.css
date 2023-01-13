@@ -5,4 +5,5 @@ main {
   height: 80vh;
   justify-items: center;
   align-items: center;
+  overflow: hidden;
 }
